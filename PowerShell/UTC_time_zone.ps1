@@ -4,8 +4,7 @@
 #   Website: arvanaghi.com 
 #   Twitter: @arvanaghi
 #
-$url = "https://secure.eicar.org/eicar.com"
-$dest = "c:\temp\testfiles.bin"
+
 $standardTimezone = [System.TimeZone]::CurrentTimeZone.StandardName
 $daylightTimezone = [System.TimeZone]::CurrentTimeZone.DaylightName
 
@@ -14,9 +13,4 @@ if ($standardTimezone -eq "Coordinated Universal Time" -or $daylightTimezone -eq
 } else {
 	Write-Output "The time zone is $standardTimezone. Proceed!"
 	
-
-	# Download the file
-	Invoke-WebRequest -Uri $url -OutFile $dest
-	
-	https://secure.eicar.org/eicar.com
 }
