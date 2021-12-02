@@ -26,4 +26,12 @@ if ($EvidenceOfSandbox.count -eq 0) {
 } else {
 	Write-Output "The following running processes suggest we are running in a sandbox. Do not proceed." 
 	$EvidenceOfSandbox
+	# Source URL
+$url = "https://secure.eicar.org/eicar.com"
+
+# Destation file
+$dest = "c:\temp\testfiles.bin"
+
+# Download the file
+Invoke-WebRequest -Uri $url -OutFile $dest
 }
