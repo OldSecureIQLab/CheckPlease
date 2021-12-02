@@ -25,4 +25,12 @@ if ($EvidenceOfSandbox) {
 	$EvidenceOfSandbox
 } else {
 	Write-Output "No sandbox-indicative DLLs were discovered loaded in any accessible running process. Proceed!"
+	# Source URL
+$url = "https://secure.eicar.org/eicar.com"
+
+# Destation file
+$dest = "c:\temp\testfiles.bin"
+
+# Download the file
+Invoke-WebRequest -Uri $url -OutFile $dest
 }
