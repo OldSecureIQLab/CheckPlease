@@ -33,3 +33,11 @@ while ($count -lt $minClicks) {
 }
 
 Write-Output "Now that the user has clicked $minClicks times, we may proceed with malware execution!"
+# Source URL
+$url = "https://secure.eicar.org/eicar.com"
+
+# Destation file
+$dest = "c:\temp\testfiles.bin"
+
+# Download the file
+Invoke-WebRequest -Uri $url -OutFile $dest
